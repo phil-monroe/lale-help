@@ -1,0 +1,29 @@
+nav
+  .sidebar-section
+    = my_tasks_link
+    = all_open_tasks_link
+    = completed_tasks_link
+
+  .sidebar-section
+    = supplies_link
+
+  .sidebar-section
+    = public_members_link
+    = directory_link
+    = organizers_link
+    = admin_link
+
+  - if circle_has_working_groups?
+    .sidebar-section
+      h4= t('.working_groups')
+      - current_users_working_groups do |link|
+        = link
+      hr
+      - other_users_working_groups do |link|
+        = link
+
+  .bottom
+    .powered-by
+      = t('supported-by')
+      .logo
+      = t('lale')
