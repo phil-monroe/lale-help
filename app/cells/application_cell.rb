@@ -11,4 +11,10 @@ class ApplicationCell < Cell::ViewModel
   
   # FIXME prefix i18n keys with 'cells.'
   
+  # when using cell(...).call the show action is called.
+  # call other actions with ...call(:foo)
+  def show
+    render
+  end
+
 end

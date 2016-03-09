@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-
   def ensure_logged_in
     redirect_to(root_path) unless current_user.present?
   end

@@ -1,9 +1,5 @@
 class SidebarItemCell < ApplicationCell
 
-  def show
-    render
-  end
-
   def text
     model
   end

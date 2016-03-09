@@ -11,10 +11,6 @@ class SidebarCell < ApplicationCell
 
   private :current_user, :circle
 
-  def show
-    render
-  end
-
   def my_tasks_link
     item('my-tasks', my_circle_tasks_path(circle), badge_text: my_tasks_count)
   end

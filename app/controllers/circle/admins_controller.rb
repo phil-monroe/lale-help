@@ -27,8 +27,4 @@ class Circle::AdminsController < ApplicationController
     outcome = Circle::ActivateMember.run(params)
     head (outcome ? :ok : :unprocessable_entity)
   end
-
-  helper_method def tab_class key
-    'selected' if action_name == key
-  end
 end

@@ -5,7 +5,7 @@ html
   body.internal
     = render 'layouts/internal/header'
     .content
-      = cell(:sidebar, current_circle, current_user: current_user).()
+      = render_cell(:sidebar, {model: current_circle, current_user: current_user})
       section
         = yield
     = render 'layouts/internal/flash'
